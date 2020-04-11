@@ -9,8 +9,15 @@
 		<th>Path:</th>
 		<td id="scm_url"><%= repository.url %></td>
 		<td>
-			<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#scm_url">
-				Copy to clipboard
+			<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#scm_url" title="Copy to clipboard">
+				&#x1f4cb;
+			</button>
+                </td>
+                <td>&nbsp;or&nbsp;</td>
+		<td id="http_scm_url"><%= repository.url.gsub(/git@git.aiias.edu:/, 'https://git.aiias.edu/') %></td>
+		<td>
+			<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#http_scm_url" title="Copy to clipboard">
+				&#x1f4cb;
 			</button>
 		</td>
 	</tr>	
