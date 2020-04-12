@@ -13,13 +13,15 @@
 				&#x1f4cb;
 			</button>
                 </td>
+                <% if repository.url.gsub(/git@git.aiias.edu:/, 'https://git.aiias.edu/') != repository.url %>
                 <td>&nbsp;or&nbsp;</td>
 		<td id="http_scm_url"><%= repository.url.gsub(/git@git.aiias.edu:/, 'https://git.aiias.edu/') %></td>
 		<td>
 			<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#http_scm_url" title="Copy to clipboard">
 				&#x1f4cb;
 			</button>
-		</td>
+                </td>
+                <% end %>
 	</tr>	
 </table>
 
